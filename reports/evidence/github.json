@@ -1,0 +1,65 @@
+{
+  "url": "https://github.com/mag871498-sys/practical-5-django-blog",
+  "commits_url": "https://github.com/mag871498-sys/practical-5-django-blog/commits/main/",
+  "commit_count": 14,
+  "public": true,
+  "screenshot": "github-history.png",
+  "commits": [
+    {
+      "sha": "73a7e7866e9e47ed7dc9234dac7e1260a7725569",
+      "message": "Document startup, verification and assignment submission"
+    },
+    {
+      "sha": "a1d7cdca049ec1b2ccfdbf061ad891c757e8de1e",
+      "message": "Add read-only SQLite data and schema viewer"
+    },
+    {
+      "sha": "30e82aee4d7daff04fd1b094954f0ecf530a4794",
+      "message": "Test models, public views and administrator access"
+    },
+    {
+      "sha": "a8be94e2c80a8a75a8ff9367b5a22286abf3b017",
+      "message": "Demonstrate post CRUD and publication queries with ORM"
+    },
+    {
+      "sha": "e83377cf90f9676d00aa6271db02b0f107f92dc0",
+      "message": "Add local bootstrap and one-command startup"
+    },
+    {
+      "sha": "acff4e27eeed8bd7d6a2ae45f5027910d3d98198",
+      "message": "Seed student biography, published posts and a draft"
+    },
+    {
+      "sha": "fdcde506ba3efe537fb910227e9f3336c8df08c2",
+      "message": "Style responsive blog pages and navigation"
+    },
+    {
+      "sha": "15787f4ef368ede13fdbe72260ebff6a4a1006fe",
+      "message": "Build inherited blog list and detail templates"
+    },
+    {
+      "sha": "e3deee84ba465d934182c36c5cd9712a6a72f0f6",
+      "message": "Add published post list, detail views and routes"
+    },
+    {
+      "sha": "36ed6789bf7e1387c8f162037b95c9fff3698dd0",
+      "message": "Configure post administration, search and filters"
+    },
+    {
+      "sha": "8cdfd5c3bfa5efbb694632501719fe221ad58cc5",
+      "message": "Create initial post migration and publication index"
+    },
+    {
+      "sha": "7f600e9c455b4242f8e652e65ff4974a71cbcefe",
+      "message": "Add post model, publication states and published manager"
+    },
+    {
+      "sha": "3c56ac2eddcab8a65bb921000650c6af7587de60",
+      "message": "Register blog application and command packages"
+    },
+    {
+      "sha": "fe042f77eb2fbce1ae91252687cdde6d4d51c710",
+      "message": "Initialize Django project and local configuration"
+    }
+  ]
+}
