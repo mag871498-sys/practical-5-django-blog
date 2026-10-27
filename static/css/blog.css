@@ -1,0 +1,128 @@
+:root {
+  --paper: #faf9f6;
+  --ink: #1e2b3c;
+  --muted: #66717e;
+  --accent: #2857be;
+  --line: #dcdedc;
+  --wash: #edf1f5;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: var(--ink);
+  background: var(--paper);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; }
+a { color: inherit; text-decoration: none; }
+a:focus-visible { outline: 3px solid var(--accent); outline-offset: 6px; }
+a:hover { color: var(--accent); }
+::selection { background: #d8e4ff; color: var(--ink); }
+.page-shell { max-width: 1184px; margin: 0 auto; padding: 0 48px; }
+.skip-link { position: absolute; top: -80px; left: 16px; z-index: 10; background: var(--ink); color: white; padding: 12px 16px; }
+.skip-link:focus { top: 12px; }
+.site-header { display: flex; align-items: center; justify-content: space-between; min-height: 116px; border-bottom: 1px solid var(--line); }
+.brand { display: inline-flex; align-items: center; gap: 13px; }
+.brand-mark { display: grid; place-items: center; width: 46px; height: 46px; background: var(--ink); color: white; font-family: Georgia, serif; font-size: 36px; line-height: 1; padding-bottom: 5px; }
+.brand-name { font-size: 15px; line-height: 1.12; font-weight: 750; letter-spacing: -0.25px; }
+.navigation { display: flex; align-items: center; gap: 32px; font-size: 14px; }
+.navigation .nav-blog { color: var(--accent); font-weight: 650; }
+.navigation a:last-child span { margin-left: 4px; }
+.intro { padding: 56px 0 54px; }
+.eyebrow { display: flex; align-items: center; gap: 12px; margin: 0 0 22px; color: var(--muted); font-size: 10px; font-weight: 700; line-height: 1.4; letter-spacing: 1.8px; }
+.issue { display: inline-flex; align-items: center; justify-content: center; width: 28px; height: 22px; border: 1px solid var(--line); color: var(--accent); font-size: 10px; letter-spacing: 1px; }
+.intro h1 { margin: 0; max-width: 820px; font-family: Georgia, "Times New Roman", serif; font-size: clamp(42px, 5.2vw, 65px); font-weight: 400; letter-spacing: -2px; line-height: 1.09; }
+.accent { color: var(--accent); }
+.intro-description { margin: 22px 0 0; color: var(--muted); font-size: 16px; line-height: 1.65; }
+.content-grid { display: grid; grid-template-columns: minmax(0, 1fr) 246px; gap: 56px; align-items: start; padding-bottom: 72px; }
+.section-heading { min-height: 46px; display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; border-bottom: 1px solid var(--ink); }
+.section-heading h2 { margin: 0; font-size: 12px; font-weight: 700; line-height: 1.5; letter-spacing: 1.3px; text-transform: uppercase; }
+.post-count { color: var(--muted); font-size: 12px; line-height: 1.5; }
+.post-card { padding: 28px 0 30px; border-bottom: 1px solid var(--line); }
+.post-meta { display: flex; align-items: center; flex-wrap: wrap; gap: 9px; color: var(--muted); font-size: 11px; line-height: 1.5; }
+.meta-divider { width: 3px; height: 3px; border-radius: 50%; background: #9da4aa; }
+.post-card h3 { margin: 11px 0 10px; font-family: Georgia, "Times New Roman", serif; font-size: 28px; font-weight: 400; letter-spacing: -0.55px; line-height: 1.25; overflow-wrap: anywhere; }
+.post-card h3 a { transition: color 120ms ease; }
+.post-excerpt { color: #5b6673; font-size: 14px; line-height: 1.75; overflow-wrap: anywhere; }
+.post-excerpt p { margin: 0 0 8px; }
+.read-link { display: inline-flex; align-items: center; gap: 18px; margin-top: 10px; color: var(--accent); font-size: 12px; font-weight: 650; }
+.read-link span { font-size: 18px; font-weight: 400; line-height: 1; }
+.sidebar { padding-top: 0; }
+.sidebar-note { background: var(--wash); padding: 25px 25px 22px; }
+.sidebar-symbol { display: block; color: var(--accent); font-size: 36px; line-height: 1; margin-bottom: 26px; }
+.sidebar-note h2 { margin: 0 0 18px; font-family: Georgia, "Times New Roman", serif; font-weight: 400; font-size: 26px; letter-spacing: -0.7px; line-height: 1.18; }
+.sidebar-note p { margin: 13px 0 0; color: #586574; font-size: 12px; line-height: 1.8; }
+.sidebar-bottom { padding: 27px 2px 0; }
+.sidebar-bottom .eyebrow { margin-bottom: 12px; font-size: 9px; }
+.topic-list { margin: 0; font-size: 12px; line-height: 2; }
+.topic-list span { padding: 0 6px; color: #9ca7b3; }
+.empty-state { padding: 38px 0; }
+.empty-symbol { display: inline-block; color: var(--accent); font-size: 30px; margin-bottom: 14px; }
+.empty-state h3 { margin: 0; font-family: Georgia, serif; font-size: 25px; font-weight: 400; }
+.empty-state p { color: var(--muted); font-size: 14px; line-height: 1.6; }
+.site-footer { display: flex; justify-content: space-between; gap: 20px; padding: 23px 0 30px; border-top: 1px solid var(--line); color: var(--muted); font-size: 10px; line-height: 1.6; }
+.site-footer span:first-child { color: var(--ink); font-weight: 650; }
+.article-layout { padding: 33px 0 65px; }
+.back-link { display: inline-flex; align-items: center; gap: 12px; color: var(--muted); font-size: 12px; line-height: 1.5; }
+.back-link span { color: var(--accent); font-size: 18px; line-height: 1; }
+.full-post { max-width: 728px; margin: 52px auto 0; }
+.article-header { padding-bottom: 28px; border-bottom: 1px solid var(--line); }
+.article-header .eyebrow { margin-bottom: 20px; }
+.article-header h1 { margin: 0 0 23px; font-family: Georgia, "Times New Roman", serif; font-size: clamp(36px, 4.5vw, 52px); font-weight: 400; letter-spacing: -1.6px; line-height: 1.14; overflow-wrap: anywhere; }
+.article-header .post-meta { font-size: 12px; }
+.article-body { padding-top: 18px; font-family: Georgia, "Times New Roman", serif; font-size: 18px; line-height: 1.85; overflow-wrap: anywhere; }
+.article-body p { margin: 19px 0; }
+.article-body p:first-child { font-size: 20px; line-height: 1.75; color: #415167; }
+.article-end { color: var(--accent); text-align: center; margin: 32px 0 0; font-size: 30px; }
+.article-navigation { max-width: 728px; margin: 33px auto 0; padding-top: 24px; border-top: 1px solid var(--line); }
+
+@media (max-width: 800px) {
+  .page-shell { padding: 0 28px; }
+  .content-grid { grid-template-columns: minmax(0, 1fr) 204px; gap: 30px; }
+  .sidebar-note { padding: 22px 20px; }
+  .sidebar-note h2 { font-size: 24px; }
+  .intro h1 { font-size: 53px; }
+}
+
+@media (max-width: 620px) {
+  .page-shell { padding: 0 23px; }
+  .site-header { min-height: 94px; }
+  .brand-mark { width: 39px; height: 39px; font-size: 31px; }
+  .brand-name { font-size: 13px; }
+  .brand { gap: 10px; }
+  .navigation { gap: 20px; font-size: 12px; }
+  .intro { padding: 39px 0 36px; }
+  .eyebrow { font-size: 9px; letter-spacing: 1.4px; margin-bottom: 20px; }
+  .intro h1 { font-size: clamp(36px, 9.8vw, 51px); letter-spacing: -1.4px; line-height: 1.12; }
+  .intro-description { font-size: 14px; line-height: 1.75; margin-top: 19px; max-width: 360px; }
+  .desktop-break { display: none; }
+  .content-grid { display: block; padding-bottom: 42px; }
+  .section-heading { min-height: 41px; }
+  .section-heading h2 { font-size: 10px; }
+  .post-count { font-size: 11px; }
+  .post-card { padding: 25px 0 27px; }
+  .post-card h3 { font-size: 26px; }
+  .post-excerpt { font-size: 13px; }
+  .sidebar { margin-top: 34px; }
+  .sidebar-note { padding: 24px; }
+  .sidebar-note h2 br { display: none; }
+  .sidebar-note h2 br::after { content: " "; }
+  .sidebar-note h2 { font-size: 26px; max-width: 310px; }
+  .sidebar-symbol { margin-bottom: 20px; font-size: 30px; }
+  .sidebar-bottom { padding-top: 21px; }
+  .topic-list br { display: none; }
+  .site-footer { padding: 20px 0 24px; font-size: 9px; gap: 15px; }
+  .site-footer span:last-child { text-align: right; max-width: 135px; }
+  .article-layout { padding-top: 25px; padding-bottom: 45px; }
+  .full-post { margin-top: 34px; }
+  .article-header h1 { font-size: 36px; letter-spacing: -1px; }
+  .article-body { font-size: 17px; line-height: 1.8; }
+  .article-body p:first-child { font-size: 18px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .post-card h3 a { transition: none; }
+}
