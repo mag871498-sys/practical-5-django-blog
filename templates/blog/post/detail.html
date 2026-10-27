@@ -1,0 +1,25 @@
+{% extends 'blog/base.html' %}
+
+{% block title %}{{ post.title }} — Нотатки про веб{% endblock %}
+
+{% block content %}
+  <div class="article-layout">
+    <a class="back-link" href="{% url 'blog:post_list' %}"><span aria-hidden="true">←</span> Усі записи</a>
+    <article class="full-post">
+      <header class="article-header">
+        <p class="eyebrow"><span class="issue">05</span> НОТАТКИ ПРО ВЕБ</p>
+        <h1>{{ post.title }}</h1>
+        <div class="post-meta">
+          <time datetime="{{ post.publish|date:'c' }}">{{ post.publish|date:"d E Y" }}</time>
+          <span class="meta-divider" aria-hidden="true"></span>
+          <span>{{ post.author.first_name|default:post.author.username }}</span>
+        </div>
+      </header>
+      <div class="article-body">{{ post.body|linebreaks }}</div>
+      <div class="article-end" aria-hidden="true">✳</div>
+    </article>
+    <div class="article-navigation">
+      <a class="back-link" href="{% url 'blog:post_list' %}"><span aria-hidden="true">←</span> Повернутися до блогу</a>
+    </div>
+  </div>
+{% endblock %}

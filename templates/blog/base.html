@@ -1,0 +1,33 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="light">
+    <title>{% block title %}Нотатки про веб{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+  </head>
+  <body>
+    <a class="skip-link" href="#content">Перейти до вмісту</a>
+    <div class="page-shell">
+      <header class="site-header">
+        <a class="brand" href="{% url 'blog:post_list' %}" aria-label="Нотатки про веб — головна">
+          <span class="brand-mark" aria-hidden="true">н.</span>
+          <span class="brand-name">Нотатки<br>про веб</span>
+        </a>
+        <nav class="navigation" aria-label="Основна навігація">
+          <a class="nav-blog" href="{% url 'blog:post_list' %}">Блог</a>
+          <a href="/admin/">Адмінка <span aria-hidden="true">↗</span></a>
+        </nav>
+      </header>
+      <main id="content">
+        {% block content %}{% endblock %}
+      </main>
+      <footer class="site-footer">
+        <span>Нотатки про веб</span>
+        <span>Трохи коду. Більше розуміння.</span>
+      </footer>
+    </div>
+  </body>
+</html>

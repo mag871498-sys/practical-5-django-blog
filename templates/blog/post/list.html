@@ -1,0 +1,52 @@
+{% extends 'blog/base.html' %}
+
+{% block title %}Нотатки про веб — блог про розробку{% endblock %}
+
+{% block content %}
+  <section class="intro" aria-labelledby="page-title">
+    <p class="eyebrow"><span class="issue">05</span> МІСЦЕ ДЛЯ ІДЕЙ</p>
+    <h1 id="page-title">Веб починається<br>з цікавості<span class="accent">.</span></h1>
+    <p class="intro-description">Короткі історії про розробку, вдалі рішення<br class="desktop-break"> та речі, які варто спробувати самому.</p>
+  </section>
+
+  <div class="content-grid">
+    <section class="posts-section" aria-labelledby="posts-heading">
+      <div class="section-heading">
+        <h2 id="posts-heading">Останні записи</h2>
+        <span class="post-count">Записів: {{ posts|length }}</span>
+      </div>
+
+      {% for post in posts %}
+        <article class="post-card">
+          <div class="post-meta">
+            <time datetime="{{ post.publish|date:'c' }}">{{ post.publish|date:"d E Y" }}</time>
+            <span class="meta-divider" aria-hidden="true"></span>
+            <span>{{ post.author.first_name|default:post.author.username }}</span>
+          </div>
+          <h3><a href="{% url 'blog:post_detail' post.id %}">{{ post.title }}</a></h3>
+          <div class="post-excerpt">{{ post.body|truncatewords:30|linebreaks }}</div>
+          <a class="read-link" href="{% url 'blog:post_detail' post.id %}" aria-label="Читати запис «{{ post.title }}»">Читати запис <span aria-hidden="true">↗</span></a>
+        </article>
+      {% empty %}
+        <div class="empty-state">
+          <span class="empty-symbol" aria-hidden="true">✳</span>
+          <h3>Перша нотатка ще попереду.</h3>
+          <p>Нові записи незабаром з’являться тут.</p>
+        </div>
+      {% endfor %}
+    </section>
+
+    <aside class="sidebar" aria-label="Про блог">
+      <div class="sidebar-note">
+        <span class="sidebar-symbol" aria-hidden="true">✳</span>
+        <h2>Зрозуміти. <br>Спробувати. <br>Зберегти.</h2>
+        <p>Цей блог — невеликий збірник ідей про те, як працює сучасний веб.</p>
+        <p>Без зайвого шуму. З увагою до деталей.</p>
+      </div>
+      <div class="sidebar-bottom">
+        <p class="eyebrow">У ПОЛІ ЗОРУ</p>
+        <p class="topic-list">Python <span>/</span> Django <br>Веброзробка <span>/</span> Практика</p>
+      </div>
+    </aside>
+  </div>
+{% endblock %}
